@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Clock App | theuicode.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex flex-row top-menu pt-5 pb-5">
+            <span class="px-4 py-2">Zurich</span>
+            <span class="px-4 py-2 active">Plovdiv</span>
+            <span class="px-4 py-2">New York</span>
+            <span class="px-4 py-2">San Francisco</span>
+        </div>
+
+        <div class="mt-5 d-flex flex-row justify-content-center align-items-center">
+            <div class="clock-bg"></div>
+            <div class="center-point position-absolute"></div>
+            <div class="minute position-absolute"></div>
+            <div class="hour position-absolute"></div>
+        </div>
+
+        <div class="date text-center mt-5 pt-4">
+            Sunday, July 25
+        </div>
+
+        <div class="d-flex flex-row bottom-menu justify-content-between py-5 px-4">
+            <span><i class="fas fa-list-ul"></i></span>
+            <span class="active"><i class="far fa-clock"></i></span>
+            <span class=""><i class="fas fa-bullhorn"></i></span>
+            <span><i class="far fa-hourglass"></i></span>
+        </div>
+    </div>
+</body>
+
+<script>
+    const minute = document.querySelector(".minute");
+
+    let secondDeg = 0;
+    setInterval(function() {
+        secondDeg = secondDeg + 6;
+        console.log(secondDeg);
+        minute.style.transform = `rotate(${secondDeg}deg) translate(50px)`;
+    }, 1000);
+</script>
+
+</html>
